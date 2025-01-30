@@ -1,0 +1,27 @@
+{
+  "name": "js_panelka_p2p",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file .env api/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.48.1",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "got": "^14.4.5",
+    "needle": "^3.3.1",
+    "node-fetch": "^3.3.2",
+    "p-limit": "^6.2.0",
+    "request": "^2.88.2",
+    "request-promise-native": "^0.0.0"
+  }
+}

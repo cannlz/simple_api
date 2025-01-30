@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supabase Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Таблица "users" из Supabase</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Кол-во сделок</th>
+                <th>Прибыль</th>
+            </tr>
+        </thead>
+        <tbody id="users-tbody">
+        </tbody>
+    </table>
+    <h1 style="text-align: center;">Таблица онлайн мерчантов</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Ник Мерча</th>
+                <th>Сделки за 30д</th>
+                <th>Остаток USDT</th>
+                <th>Цена RUB/USDT</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody id="merchants-tbody">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
