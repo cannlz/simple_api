@@ -21,7 +21,6 @@ app.get('/api/data', async (req, res) => {
         if (error) {
             throw error;
         };
-
         res.json(data);
     } catch (error) {
         console.error('Ошибка получения данных с Supabase:', error);
@@ -40,6 +39,27 @@ app.get('/api/parser', async (req, res) => {
         console.error('Ошибка получения данных с Bybit:', error);
         res.status(500).json({ error: 'Ошибка сервера' });
     };
+});
+
+// Поиск по бд
+app.get('/api/users', async (req, res) =>{
+    let searchQuery = req.query.search || '';
+    try {
+        const { data, error } = await supabase
+            .from('users')
+            .select('*')
+            .like('counterparty', `%${searchQuery}%`);
+
+        if (error) {
+            throw error;
+        };
+
+        res.json(data);
+    } catch (error) {
+        console.error('Ошибка получения данных с Supabase:', error);
+        res.status(500).json({ error: 'Ошибка сервера' });
+    }
+
 });
 
 // Start the server
