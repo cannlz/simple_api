@@ -8,37 +8,55 @@
 </head>
 <body>
     <h1 style="text-align: center;">Таблица "users" из Supabase</h1>
-    <div class="container">
-        <div id="search-username">
-            <p class="search-title">Найти пользователя</p>
-            <input type="text" id="input-search-username" class="input-search" name="search" placeholder="Search for...">
-            <button class="button-search" id="button-search-username">Поиск пользователя</button>
+    <div class="wrapper">
+        <div class="container left-container">
+            <div id="search-username">
+                <p class="search-title">Найти пользователя</p>
+                <input type="text" id="input-search-username" class="input-search" name="search" placeholder="Ник пользователя...">
+                <button class="button-search" id="button-search-username">Найти</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Номер сделки</th>
+                        <th>Конвертация p2p</th>
+                        <th>Направление</th>
+                        <th>Фиатный баланс</th>
+                        <th>Валюта</th>
+                        <th>Цена</th>
+                        <th>Валюта</th>
+                        <th>Количество монет</th>
+                        <th>Криптовалюта</th>
+                        <th>Комиссия</th>
+                        <th>Криптовалюта</th>
+                        <th>Мерчант</th>
+                        <th>Статус</th>
+                        <th>Время</th>
+                    </tr>
+                </thead>
+                <tbody id="users-tbody">
+                </tbody>
+            </table>
         </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Номер сделки</th>
-                    <th>Конвекртация p2p</th>
-                    <th>Направление</th>
-                    <th>Фиатный баланс</th>
-                    <th>Валюта</th>
-                    <th>Цена</th>
-                    <th>Валюта</th>
-                    <th>Количество монет</th>
-                    <th>Криптовалюта</th>
-                    <th>Комиссия</th>
-                    <th>Криптовалюта</th>
-                    <th>Мерчант</th>
-                    <th>Статус</th>
-                    <th>Время</th>
-                </tr>
-            </thead>
-            <tbody id="users-tbody">
-            </tbody>
-        </table>
+
+        <div class="container right-container">
+            <div class="search-title">Статистика</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Количество сделок</th>
+                        <th>Всего Руб</th>
+                        <th>Всего USDT</th>
+                    </tr>
+                </thead>
+                <tbody id="short-stat">
+                    
+                </tbody>
+            </table>
+        </div>
     </div>
-    
+
     <h1 style="text-align: center;">Таблица онлайн мерчантов</h1>
     <table>
         <thead>

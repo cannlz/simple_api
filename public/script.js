@@ -14,7 +14,6 @@ function usersTable(apiUrl, tableId){
             tableBody.innerHTML = ''; // Чистим таблицу
 
             data.forEach(item => {
-                console.log(item)
                 const row = document.createElement('tr');
 
                 const cellId = document.createElement('td');
@@ -128,7 +127,6 @@ function searchUsers(){
             tableBody.innerHTML = ''; // Чистим таблицу
 
             data.forEach(item => {
-                console.log(item)
                 const row = document.createElement('tr');
 
                 const cellId = document.createElement('td');
@@ -193,6 +191,25 @@ function searchUsers(){
 
                 tableBody.appendChild(row);
             });
+
+            const tableStat = document.getElementById("short-stat");
+            tableStat.innerHTML = ''; // Чистим таблицу
+
+            const row = document.createElement('tr');
+
+            const cellId = document.createElement('td');
+            cellId.textContent = Object.keys(data).length;
+            row.appendChild(cellId);
+
+            const cellRubSum = document.createElement('td');
+            cellRubSum.textContent = data.reduce((res, i) => res + i.fiatAmount, 0);
+            row.appendChild(cellRubSum);
+
+            const cellFiatSum = document.createElement('td');
+            cellFiatSum.textContent = data.reduce((res, i) => res + i.coinAmount, 0);
+            row.appendChild(cellFiatSum);
+
+            tableStat.appendChild(row);
         })
         .catch(error => console.error('Ошибка поиска:', error));
 }
